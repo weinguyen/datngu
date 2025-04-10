@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 0;
+  }
+  .container {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: calc(100% - 40px);
+    align-items: center;
+  }
+  .msg {
+    color: red;
+  }
+  input {
+    width: calc(100% - 20px);
+    margin: 5px 0;
+    padding: 8px;
+  }
+  
+  button {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  p {
+    color: red;
+    font-size: 12px;
+  }
+  
+  #logoutButton {
+    padding: 0;
+    color: #0056b3;
+    background-color: transparent;
+    width: auto;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  #fillUserNTD {
+    /* display: none; */
+    font-size: 12px;
+    width: auto !important;
+  }
+  
