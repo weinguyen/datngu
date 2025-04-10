@@ -44,14 +44,11 @@ body {
     background-color: transparent;
     width: auto;
   }
-  
-  .hidden {
-    display: none !important;
-  }
+
   
   #fillUserNTD {
     /* display: none; */
     font-size: 12px;
-    width: auto !important;
+ 
   }
   
