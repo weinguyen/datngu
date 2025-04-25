@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="container">
     <div style="display: flex; flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;">
-    <div>
-    
-      <h3>Đăng nhập</h3>
-      <br>
-      <input type="text" id="token" placeholder="Nhập token" required hidden>
-      <p class="msg" id="tokenMessage"></p>
-      <div style="text-align: left; margin-bottom: 20px;">
-        <h2>Chào mừng <strong id="hoten"></strong>!</h2>
-        <h4 style="margin-bottom: 5px;">Buổi sáng</h4>
-        <div>Thời gian checkin: <span id="checkinsang"></span></div>
-        <div>Thời gian checkout: <span id="checkoutsang"></span></div>
-        <h4 style="margin-bottom: 5px;">Buổi chiều</h4>
+      <div>
+
+        <h3>Đăng nhập</h3>
+        <br>
+        <input type="text" id="token" placeholder="Nhập token" required hidden>
+        <p class="msg" id="tokenMessage"></p>
+        <div style="text-align: left; margin-bottom: 20px;">
+          <h2>Chào mừng <strong id="hoten"></strong>!</h2>
+          <h4 style="margin-bottom: 5px;">Buổi sáng</h4>
+          <div>Thời gian checkin: <span id="checkinsang"></span></div>
+          <div>Thời gian checkout: <span id="checkoutsang"></span></div>
+          <h4 style="margin-bottom: 5px;">Buổi chiều</h4>
           <div>Thời gian checkin: <span id="checkinchieu"></span></div>
           <div>Thời gian checkout: <span id="checkoutchieu"></span></div>
         </div>
@@ -31,7 +33,8 @@
       </div>
     </div>
   </div>
-  
+
   <script src="./logged_in.js"></script>
 </body>
+
 </html>

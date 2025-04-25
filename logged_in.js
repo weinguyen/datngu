@@ -11,8 +11,8 @@ var dataUser = {
 login();
 
 async function login() {
-    const username = "025206011600";
-    const password = "ript@123";
+    const username = "031206006283";
+    const password = "123456";
     const token = document.getElementById("token");
     const loginMessage = document.getElementById("loginMessage");
     console.log(username, password);
@@ -33,8 +33,8 @@ async function login() {
         if (response.ok && data.data.accessToken) {
             token.value = data.data.accessToken;
             dataUser = {
-              token: data.data.accessToken,
-              username: data.data.user.profile.name,
+                token: data.data.accessToken,
+                username: data.data.user.profile.name,
             };
             getInfo();
         } else {
@@ -133,7 +133,7 @@ async function getInfo() {
             if (
                 (buoi === "sang" &&
                     datacheckin.sang.trang_thai_check_out !==
-                        "Chưa Check-out") ||
+                    "Chưa Check-out") ||
                 (buoi === "chieu" &&
                     datacheckin.chieu.trang_thai_check_out !== "Chưa Check-out")
             )
