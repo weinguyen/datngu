@@ -189,3 +189,54 @@ document.getElementById("checkinbtn").addEventListener("click", async () => {
         messageElement.textContent = "Lỗi kết nối!";
     }
 });
+
+
+document.getElementById("checkoutbtn").addEventListener("click", async () => {
+    const messageElement = document.getElementById("attendanceMessage");
+    const result = {
+        token: dataUser.token,
+    };
+    // Lấy token từ Chrome storage
+    // chrome.storage.local.get(["token"], async (result) => {
+    // });
+    if (!result.token) {
+        messageElement.textContent = "Bạn chưa đăng nhập!";
+        return;
+    }
+
+    const confirmLogout = confirm(
+        "Bạn chắc chắn đã hoàn thành hết công việc trước khi ra về?",
+    );
+    if (confirmLogout) {
+        try {
+            const response = await fetch(
+                "https://internal-api.ript.vn/diem-danh-that/check-out",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${result.token}`,
+                    },
+                    body: JSON.stringify({ buoi: buoi }),
+                },
+            );
+
+            const data = await response.json();
+
+            if (response.ok) {
+                console.log(data);
+                messageElement.style.color = "green";
+                messageElement.textContent = "Điểm danh thành công!";
+                getInfo();
+            } else {
+                messageElement.style.color = "red";
+                messageElement.textContent =
+                    "Điểm danh thất bại: " +
+                    (data.message || "Lỗi không xác định");
+            }
+        } catch (error) {
+            messageElement.style.color = "red";
+            messageElement.textContent = "Lỗi kết nối!";
+        }
+    }
+});
